@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jug</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+        padding-top: 100px;
+        background-color: #efefef;
+    }
+
+    .navbar-brand img {
+        margin: -53px;
+        margin-left: 25px;
+        padding: 0px;
+    }
+
+    .navbar-brand {
+        margin: -53px;
+        padding: 0px;
+    }
+
+    .navbar {
+        background-color: whitesmoke;
+        height: 50px;
+        padding: 0.5rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 3;
+    }
+
+    .navbar-expand-lg.fixed-top {
+        position: fixed;
+        top: 50px;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 1.25rem;
+    }
+
+    .navbar-toggler:focus,
+    .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .nav-link {
+        color: #666777;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: #000;
+    }
+
+    @media (min-width:991px) {
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #5c3f3f;
+            visibility: hidden;
+            transition: 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 100%;
+            visibility: visible;
+        }
+    }
+
+    .col-sm-4 {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .col-sm-4 img {
+        height: 300px;
+        width: 300px;
+        padding: 10px;
+        margin: 25px 25px;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .col-sm-4:hover img {
+        transform: scale(1.1);
+    }
+
+
+    .heading {
+        position: relative;
+        text-align: center;
+        margin-top: 100px;
+    }
+
+    .heading img {
+        width: 100%;
+        height: 300px;
+        display: block;
+        z-index: -1;
+    }
+
+    .heading h {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        margin: 0;
+        color: white;
+        z-index: 2;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 50px;
+    }
+
+    .heading p {
+        position: absolute;
+        bottom: 80px;
+        left: 50%;
+        transform: translateX(-50%);
+        margin: 0;
+        color: white;
+        z-index: 2;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+    }
+
+    .layer {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.6);
+        z-index: 1;
+    }
+
+    /**Footer**/
+    .combine-footer-column {
+        height: 190px;
+        margin-left: -120px;
+        margin-right: -120px;
+        background-color: #e2e6e8;
+        margin-top: 15px;
+    }
+
+    .combine-footer-column-inside {
+        display: flex;
+        width: 75%;
+        justify-content: space-evenly;
+    }
+
+    /*column 1*/
+    .column1 {
+        display: flex;
+        flex-direction: column;
+        color: #000000;
+        width: 200px;
+        font-size: 0.85rem;
+    }
+
+    .logo {
+        height: 100px;
+        width: 180px;
+        background-size: cover;
+    }
+
+    .social-media-icons {
+        display: flex;
+        flex-direction: row;
+        margin-top: 10px;
+        width: 130px;
+        justify-content: space-between;
+    }
+
+    /*Column 2,3,4*/
+
+    .heading {
+        color: #000000;
+        font-size: 1rem;
+        font-weight: 700;
+        margin: 6px 0px 14px;
+    }
+
+    .column {
+        margin-top: 38px;
+    }
+
+    .column li {
+        list-style: none;
+    }
+
+    .column a {
+        text-decoration: none;
+        color: #000000;
+        font-size: 0.85rem;
+    }
+
+    .column a:hover {
+        color: #255c63;
+    }
+
+    /*Footer Media Queries*/
+    @media only screen and (max-width: 428px) {
+        .combine-footer-column {
+            height: auto;
+            padding: 15px;
+        }
+
+        .combine-footer-column-inside {
+            flex-direction: column;
+        }
+
+        .column1 {
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .social-media-icons {
+            width: 100%;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        .column {
+            margin-top: 15px;
+        }
+    }
+
+    /**Footer**/
+    @media only screen and (max-width: 600px) {
+        .combine-footer-column {
+            height: auto;
+        }
+
+        .combine-footer-column-inside {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .column1,
+        .column2,
+        .column3,
+        .column4 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .column {
+            margin-top: 10px;
+        }
+
+        .logo {
+            margin-bottom: 10px;
+        }
+
+        .column1 {
+            margin-left: 45px;
+            ;
+        }
+    }
+
+</style>
+
+<body>
+    <header>
+        <!------------Navigation bar-------------->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid text-center">
+                <h5 class="mx-auto"
+                    style="font-size: 1rem; font-weight: 700; background-color:#e2e6e8; width:100vw; height:40px">
+                    Pottery that match your vibe <span style="color:#666777">For you with <i
+                            class="bi bi-suit-heart-fill"></i></span>
+                </h5>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="logo.png" style="height:150px;" alt="brand-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mudberry Studio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="About.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="courses.html">Activities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#contact_link">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#FAQs_link">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="heading">
+        <div class="layer"> </div>
+        <img src="jug_bg.jpg">
+        <h style="font-family:'Playfair Display', serif; font-size: 5rem;">Clay Jugs</h>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <img src="j1.jpg">
+            </div>
+            <div class="col-sm-4">
+                <img src="j2.jpg">
+            </div>
+            <div class="col-sm-4">
+                <img src="j3.jpg">
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <img src="j4.jpg">
+                </div>
+                <div class="col-sm-4">
+                    <img src="j5.jpg">
+                </div>
+                <div class="col-sm-4">
+                    <img src="j6.jpg">
+                </div>
+            </div>
+        </div>
+        <!--------Footer------->
+        <footer>
+            <div class="combine-footer-column">
+                <div class="combine-footer-column-inside">
+                    <div class="column1">
+                        <div class="logo" style="background-image: url('logo.png');"></div>
+                        <p>Amplify your journey through the symphony of a creative life.</p>
+                        <div class="social-media-icons">
+                            <i class="fa-brands fa-facebook"></i>
+                            <i class="fa-brands fa-instagram"></i>
+                            <i class="fa-brands fa-x-twitter"></i>
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                    </div>
+                    <div class="column2 column">
+                        <ul>
+                            <li class="heading">About Us</li>
+                            <li><a href="About.html">About owner</a></li>
+                            <li><a href="courses.html">Courses</a></li>
+                            <li><a href="courses.html">Private sessions</a></li>
+                        </ul>
+                    </div>
+                    <div class="column3 column">
+                        <ul>
+                            <li class="heading">Contact Us</li>
+                            <li><a href="index.html">Studio location</a></li>
+                            <li><a href="https://api.whatsapp.com/send?phone=9099747799">Whatsapp</a></li>
+                            <li><a href="https://www.instagram.com/mudberry_studio?igsh=MWN0aGJ4ajZ2enl5bg==">Instagram</a></li>
+                        </ul>
+                    </div>
+                    <div class="column4 column">
+                        <ul>
+                            <li class="heading">Categories</li>
+                            <li><a href="pot.html">Pots</a></li>
+                            <li><a href="creativity.html">Home decor</a></li>
+                            <li><a href="index.html">Best of us</a></li>
+                            <li><a href="animal.html">Animal sculptures</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="https://code.jquery.com/jquery-3.7.0.js"
+            integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+            integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="bootstrap.js"></script>
+</body>
+
+</html>

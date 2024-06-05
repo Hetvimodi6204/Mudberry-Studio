@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<style>
+    body {
+        padding-top: 100px;
+        background-color: #efefef;
+    }
+
+    .navbar-brand img {
+        margin: -53px;
+        margin-left: 50px;
+        padding: 0px;
+    }
+
+    .navbar-brand {
+        margin: -53px;
+        padding: 0px;
+    }
+
+    .navbar {
+        background-color: whitesmoke;
+        height: 50px;
+        padding: 0.5rem;
+        position: fixed;
+        /* width: 100%; */
+        top: 0;
+        z-index: 2;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .navbar-expand-lg.fixed-top {
+        position: fixed;
+        top: 50px;
+        width: 100%;
+        z-index: 1;
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 1.25rem;
+    }
+
+    .navbar-toggler:focus,
+    .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .nav-link {
+        color: #666777;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: #000;
+    }
+
+    @media (min-width:991px) {
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #5c3f3f;
+            visibility: hidden;
+            transition: 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 100%;
+            visibility: visible;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <!------------Navigation bar-------------->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid text-center">
+                <h5 style="font-size: 1rem; font-weight: 700; background-color:#e2e6e8; width:100vw; height:40px">
+                    Pottery that match your vibe <span style="color:#666777">For you with <i
+                            class="bi bi-suit-heart-fill"></i></span>
+                </h5>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="logo.png" style="height:150px;" alt="brand-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mudberry Studio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="About.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="courses.html">Activities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#contact_link">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#FAQs_link">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="course-bg-main">
+        <p>Courses & Private Sessions</p>
+    </div>
+    <!--Course-->
+    <div id="courses_link">
+    <div class="course-title title">
+        <p style="margin-bottom: 0rem;">COURSE</p>
+    </div>
+    <div class="course-details">
+        <div class="course-image-container">
+            <div class="course-image" style="background-image: url('Course_selling.jpg');"></div>
+        </div>
+        <div class="course-details-text">
+            <div class="text-main-title">
+                <p>Hand Building Technique for POTTERY, by Jaydeep Kotadiya</p>
+            </div>
+            <div class="text-main-price">
+                <p>₹8,000</p>
+            </div>
+            <div class="course-small-title-text">
+                <p>Course details</p>
+            </div>
+            <div class="icon-text">
+                <i class="fa-solid fa-check"></i>
+                <p>1 Month Course</p>
+            </div>
+            <div class="icon-text">
+                <i class="fa-solid fa-check"></i>
+                <p>Total 12 sessions, 3 sessions per Week</p>
+            </div>
+            <div class="icon-text">
+                <i class="fa-solid fa-check"></i>
+                <p>1 Hour per Session</p>
+            </div>
+            <div class="icon-text">
+                <i class="fa-solid fa-check"></i>
+                <p>6 sessions for Hand Building</p>
+            </div>
+            <div class="icon-text">
+                <i class="fa-solid fa-check"></i>
+                <p>6 sessions for Wheel Throwing</p>
+            </div>
+            <div class="connect-line">
+                "FEEL THE PEACE, TOUCH THE GRACE"
+            </div>
+            <div class="buy-now" href="">
+                <a href="https://api.whatsapp.com/send?phone=9099747799">BUY NOW</a>
+            </div>
+        </div>
+    </div>
+</div>
+    <!--Glimpses of Course-->
+    <div class="glimpses-course-title">
+        <p>Glimpses of our Course</p>
+        <p class="dash">—</p>
+    </div>
+    <div class="glimpses-gallery">
+        <div class="glimpses-image-container">
+            <div class="glimpses-image" style="background-image: url('course5.jpg');">
+                <div class="insta-content">
+                    <a href="https://www.instagram.com/p/B3ATN45hZeU/?igsh=bHlsNHdvb3M4eHdr" target="_main">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="glimpses-image-container">
+            <div class="glimpses-image" style="background-image: url('course2.jpg');">
+                <div class="insta-content">
+                    <a href="https://www.instagram.com/mudberry_studio?igsh=MWN0aGJ4ajZ2enl5bg==" target="_main">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="glimpses-image-container">
+            <div class="glimpses-image" style="background-image: url('course3.jpg');">
+                <div class="insta-content">
+                    <a href="https://www.instagram.com/p/ChfVd_VMEh6/?igsh=N2g0MGd1MGwzbm5q" target="_main">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="glimpses-image-container">
+            <div class="glimpses-image" style="background-image: url('course4.jpg');">
+                <div class="insta-content">
+                    <a href="https://www.instagram.com/mudberry_studio?igsh=MWN0aGJ4ajZ2enl5bg==" target="_main">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="glimpses-image-container">
+            <div class="glimpses-image" style="background-image: url('Course1.jpg');">
+                <div class="insta-content">
+                    <a href="https://www.instagram.com/mudberry_studio?igsh=MWN0aGJ4ajZ2enl5bg==" target="_main">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="glimpses-image-container">
+            <div class="glimpses-image" style="background-image: url('course6.jpg');">
+                <div class="insta-content">
+                    <a href="https://www.instagram.com/mudberry_studio?igsh=MWN0aGJ4ajZ2enl5bg==" target="_main">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--Private Sessions-->
+    <div id="Private_link">
+        <div class="paivate-sessions-container">
+            <div class="private-sessions-title title">
+                <p style="margin-bottom: 0rem;">PRIVATE POTTERY SESSIONS</p>
+            </div>
+            <div class="auto-type-container">
+                <p>Pottery is <span class="auto-type"></span></p>
+            </div>
+
+            <div class="private-session-photos">
+                <div class="box1 photos">
+                    <div class="session-image" style="background-image: url('Session1.jpg');"></div>
+                    <p>Mudberry Studio: Perfect place for happy family time</p>
+                </div>
+                <div class="box2 photos">
+                    <div class="session-image" style="background-image: url('session2.jpg');"></div>
+                    <p>Date like this: A pottery date</p>
+                </div>
+                <div class="box3 photos">
+                    <div class="session-image" style="background-image: url('session4.jpg');"></div>
+                    <p>Shaping memories in clay, a pottery date:).</p>
+                </div>
+                <div class="box4 photos">
+                    <div class="session-image" style="background-image: url('session5.jpg');"></div>
+                    <p>Birthday celebration एक ऐसा भी!</p>
+                </div>
+                <div class="box5 photos">
+                    <div class="session-image" style="background-image: url('session6.jpg');"></div>
+                    <p>You are on pottery date and it becomes a fun evening <3 </p>
+                </div>
+                <div class="box6 photos">
+                    <div class="session-image" style="background-image: url('session7.jpg');"></div>
+                    <p>Pottery shares the love</p>
+                </div>
+                <div class="box7 photos">
+                    <div class="session-image" style="background-image: url('session8.jpg');"></div>
+                    <p>Making birthday more memorable<br> and beautiful.</p>
+                </div>
+                <div class="box8 photos">
+                    <div class="session-image" style="background-image: url('session9.jpg');"></div>
+                    <p>We make a hold on everything</p>
+                </div>
+                <div class="box9 photos">
+                    <div class="session-image" style="background-image: url('session10.jpg');"></div>
+                    <p>The purposeful play!</p>
+                </div>
+            </div>
+            <div class="private-sessions-details">
+                <div class="session-details-heading">
+                    <p>Be the Next to Shape Your Memories into CLAY!!</p>
+                </div>
+            </div>
+            <div class="session-inner-details-book-now">
+                <div class="book-now"><a href="https://api.whatsapp.com/send?phone=9099747799">Contact Us on
+                        Whatsapp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Footer-->
+    <footer>
+        <div class="combine-footer-column">
+            <div class="combine-footer-column-inside">
+                <div class="column1">
+                    <div class="logo" style="background-image: url('logo.png');"></div>
+                    <p>Amplify your journey through the symphony of a creative life.</p>
+                    <div class="social-media-icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                </div>
+                <div class="column2 column">
+                    <ul>
+                        <li class="heading">About Us</li>
+                        <li><a href="About.html">About owner</a></li>
+                        <li><a href="#courses_link">Courses</a></li>
+                        <li><a href="#Private_link">Private sessions</a></li>
+                    </ul>
+                </div>
+                <div class="column3 column">
+                    <ul>
+                        <li class="heading">Contact Us</li>
+                        <li><a href="index.html">Studio location</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=9099747799">Whatsapp</a></li>
+                        <li><a href="https://www.instagram.com/mudberry_studio?igsh=MWN0aGJ4ajZ2enl5bg==">Instagram</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="column4 column">
+                    <ul>
+                        <li class="heading">Categories</li>
+                        <li><a href="pot.html">Pots</a></li>
+                        <li><a href="creativity.html">Home decor</a></li>
+                        <li><a href="index.html">Best of us</a></li>
+                        <li><a href="animal.html">Animal sculptures</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Auto type script-->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var type = new Typed(".auto-type", {
+            strings: ["LOVE", "MEMORY", "EMOTION", "EXPRESSION", "CREATIVITY", "PEACE"],
+            typespeed: 100,
+            backspeed: 100,
+            loop: true
+        })
+    </script>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="bootstrap.js"></script>
+</body>
+
+</html>

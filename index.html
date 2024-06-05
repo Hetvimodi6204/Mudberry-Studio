@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mudberry Studio</title>
+    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    body {
+        padding-top: 100px;
+        background-color: #efefef;
+    }
+
+    .navbar-brand img {
+        margin: -53px;
+        margin-left: 50px;
+        padding: 0px;
+    }
+
+    .navbar-brand {
+        margin: -60px;
+        padding: 5px;
+    }
+
+    .navbar {
+        background-color: whitesmoke;
+        height: 50px;
+        padding:0.3rem;
+        position: fixed;
+        /* width: 100%; */
+        top: 0px;
+        z-index: 10;
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .navbar-expand-lg.fixed-top {
+        position: fixed;
+        top: 50px;
+        width: 100%;
+        z-index: 10;
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 1.25rem;
+
+    }
+
+    .navbar-toggler:focus,
+    .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .nav-link {
+        color: #666777;
+        font-weight: 500;
+        position: relative;
+        padding-top: 5px;
+    }
+    .nav-item{
+       padding: 5px;
+       margin-bottom: 5px;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: #000;
+    }
+
+    @media (min-width:991px) {
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #5c3f3f;
+            visibility: hidden;
+            transition: 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 100%;
+            visibility: visible;
+        }
+    }
+
+    /**FAQs CSS**/
+    .faq-container {
+        max-width: 100%;
+        background-color: #efefef;
+        margin-top: 100px;
+    }
+
+    h1 {
+        text-align: center;
+        color: #333;
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+        cursor: pointer;
+        padding: 10px;
+        transition: background-color 0.3s;
+    }
+
+    .faq-item p {
+        font-size: 1rem;
+        color: #000000;
+    }
+
+    .faq-item:hover {
+        background-color: #efefef;
+    }
+
+    .question {
+        color: #007bff;
+        font-weight: 600;
+    }
+
+    .answer {
+        color: #333;
+        display: none;
+        margin-top: 10px;
+    }
+
+    body {
+        background-color: #efefef;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    .best-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 0 35px;
+        margin-top: 50px;
+    }
+
+    .best-main-heading {
+        background-color: #d2b48c;
+        height: 250px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .best-heading-image {
+        background-image: url(pot1.png);
+        height: 400px;
+        width: 350px;
+        margin-left: 10px;
+        background-size: cover;
+    }
+
+    .best-title-inside {
+        display: flex;
+        flex-direction: column;
+        width: 150%;
+        height: 250px;
+        align-items: center;
+        justify-content: center;
+        margin-left: 5px;
+    }
+
+    .best-playfair {
+        font-family: 'Playfair Display', serif;
+        font-size: 6rem;
+        color: black;
+        line-height: 1;
+        display: inline;
+    }
+
+    .more-section {
+        display: flex;
+        flex-direction: row;
+        height: 40px;
+        width: 130px;
+        background-color: #3e777f;
+        align-items: center;
+        justify-content: center;
+        line-height: 0.5;
+        cursor: pointer;
+        margin-top: 15px;
+        color: white;
+        border: 1px solid black;
+    }
+
+    .more-section:hover {
+        background-color: #7bc0c7;
+        color: black;
+    }
+
+    .more-section p,
+    a {
+        font-size: 1.5rem;
+        color: #ffffff;
+        margin-right: 2px;
+        margin-top: 17px;
+        text-decoration: none;
+    }
+
+    .arrow-icon {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 20px;
+        width: 20px;
+        border-radius: 50%;
+        border: 2px solid white;
+        margin-left: 2px;
+    }
+
+    .arrow-icon i {
+        color: white;
+        font-size: 1rem;
+    }
+
+
+    /*Media screen for best title*/
+    @media only screen and (max-width: 768px) {
+        .best-main-heading {
+            flex-direction: column;
+            height: auto;
+            padding: 30px 20px;
+            margin-top: 50px;
+        }
+
+        .best-heading-image {
+            width: 100%;
+            margin-left: -50px;
+        }
+
+        .best-title-inside {
+            margin-left: -70px;
+            text-align: center;
+            /* Adjust the font size for smaller screens */
+        }
+
+        .more-section p {
+            font-size: 0.85rem;
+        }
+
+        .best-playfair {
+            font-size: 5rem;
+        }
+
+        .best-container {
+            margin-top: 30px;
+        }
+    }
+
+    .wrapper {
+        max-width: 1200px;
+        position: relative;
+    }
+
+    .wrapper i {
+        background-color: #ffffff;
+        height: 46px;
+        width: 46px;
+        text-align: center;
+        line-height: 46px;
+        border-radius: 50%;
+        font-size: 1.2rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .wrapper i:first-child {
+        left: -23px;
+        display: none;
+    }
+
+    .wrapper i:last-child {
+        right: -23px;
+    }
+
+    .wrapper .carousel {
+        font-size: 0px;
+        white-space: nowrap;
+        cursor: pointer;
+        overflow: hidden;
+        scroll-behavior: smooth;
+    }
+
+    .carousel.dragging {
+        scroll-behavior: auto;
+        cursor: grab;
+    }
+
+    .carousel.dragging img {
+        pointer-events: none;
+    }
+
+    .carousel img {
+        height: 340px;
+        width: calc(100%/3);
+        object-fit: cover;
+        margin-left: 14px;
+    }
+
+    .carousel:first-child {
+        margin-left: 0px;
+    }
+
+    @media screen and (max-width:900px) {
+        .carousel img {
+            width: calc(100%/2)
+        }
+    }
+
+    @media screen and (max-width:550px) {
+        .carousel img {
+            width: calc(100%)
+        }
+    }
+
+    .explore {
+        background-color: #3e777f;
+        height: 50px;
+        width: 140px;
+        font-size: 1.5rem;
+        margin-top: -10px;
+        text-align: center;
+        color: white;
+        border: 1px solid black;
+    }
+
+    .explore:hover {
+        background-color: #7bc0c7;
+        color: black;
+    }
+
+    .hero-section::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 65%;
+        background: rgba(255, 255, 255, 0.5);
+        z-index: 1;
+    }
+
+    .head {
+        position: relative;
+        z-index: 2;
+        /* Adjust the z-index to keep the text above the layer */
+    }
+
+    /* Rest of your existing CSS */
+    .hero-section {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+
+    /* Your existing styles */
+
+.head h {
+    font-family: 'Playfair Display', serif;
+    color: #144f57;
+    font-size: 5rem;
+}
+
+.head p {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+}
+
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    .head h {
+        font-size: 3.5rem; /* Adjust the font size for smaller screens */
+        text-align: center; /* Center align the text */
+        margin-bottom: 10px; /* Add some bottom margin for spacing */
+    }
+
+    .head p {
+        font-size: 1.9rem; /* Adjust the font size for smaller screens */
+        text-align: center; /* Center align the text */
+        white-space: nowrap ;
+    }
+}
+
+</style>
+
+<body>
+    <header>
+        <!------------Navigation bar-------------->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid text-center">
+                <h5 style="font-size: 1rem; font-weight: 700; background-color:#e2e6e8; width:100vw; height:40px;">
+                    Pottery that match your vibe <span style="color:#666777">For you with <i
+                            class="bi bi-suit-heart-fill"></i></span>
+                </h5>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="logo.png" style="height:150px;" alt="brand-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mudberry Studio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="About.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="courses.html">Activities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#contact_link">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#FAQs_link">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!---------section 1----------->
+    <section class="hero-section">
+        <div class="container-fluid" style="margin-right: -15px; margin-left: -15px; position: relative;">
+            <video autoplay muted loop
+                style="object-fit: cover; width: 100%; height: 65%; position: absolute; top: 0; left: 0; z-index: -1;">
+                <source src="bg_vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="row">
+                <div class="sec1">
+                    <div class="head">
+                        <h>Mudberry
+                            Studio</h>
+                        <br>
+                        <p>Learn • Enjoy • Create</p>
+                        <br>
+                        <a href="#explore_link">
+                            <button type="button" class="explore">
+                                Explore >
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="image1"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!----Section 2(card)-------->
+
+    <div class="class-main-container">
+        <a href="pot.html" class="card pot">
+            <img src="pot.png" alt="">
+            <p>Flower Pot</p>
+        </a>
+        <a href="jug.html" class="card pot">
+            <img src="jug.png" alt="">
+            <p>Ceramic Jug</p>
+        </a>
+        <a href="creativity.html" class="card pot">
+            <img src="creativity.png" alt="">
+            <p>Our Creativity</p>
+        </a>
+        <a href="animal.html" class="card pot">
+            <img src="animal.png" alt="">
+            <p>Animal Sculpture</p>
+        </a>
+        <a href="coins.html" class="card pot">
+            <img src="coin.png" alt="">
+            <p>Antique Coins</p>
+        </a>
+
+    </div>
+    <script>
+        const cards = document.querySelectorAll('.card');
+
+        function checkVisibility() {
+            cards.forEach(card => {
+                const rect = card.getBoundingClientRect();
+                const isVisible = (rect.top >= 0) && (rect.bottom <= window.innerHeight);
+
+                if (isVisible) {
+                    card.classList.add('visible');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', checkVisibility);
+        window.addEventListener('resize', checkVisibility);
+
+        // Initial check on page load
+        checkVisibility();
+    </script>
+
+
+    <!------Section 3 (best of us)------>
+    <div id="explore_link">
+        <div class="best-main-heading">
+            <div class="best-heading-image">
+
+            </div>
+            <div class="best-title">
+                <div class="best-title-inside">
+                    <div class="best-playfair">
+                        <p>Best of Us</p>
+                    </div>
+                    <div class="more-section">
+                        <p><a href="more.html">More</a></p>
+                        <div class="arrow-icon">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="best-container">
+            <div class="wrapper">
+                <i id="left" class="fa-solid fa-angle-left"></i>
+                <div class="carousel" id="images">
+                    <img src="Screenshot_20231229-135252_1.jpg" alt="img" draggable="false">
+                    <img src="Screenshot_20231229-135305_1.jpg" alt="img" draggable="false">
+                    <img src="Screenshot_20231229-135313_1.jpg" alt="img" draggable="false">
+                    <img src="Screenshot_20231229-135331_1.jpg" alt="img" draggable="false">
+                    <img src="Screenshot_20231229-135338_1.jpg" alt="img" draggable="false">
+                    <img src="Screenshot_20231229-135353_1.jpg" alt="img" draggable="false">
+                    <img src="10.JPG" alt="img" draggable="false">
+                    <img src="15(1).JPG" alt="img" draggable="false">
+                </div>
+                <i id="right" class="fa-solid fa-angle-right"></i>
+            </div>
+        </div>
+    </div>
+    <!------Contact Us -------->
+    <div id="contact_link">
+        <div class="contact">
+            <h1>CONTACT US</h1>
+        </div>
+        <div class="wrapper">
+            <section class="columns">
+                <div class="col">
+                    <div class="icons">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+                    <h2>Phone</h2>
+                    <br>
+                    <p>Mobile No: 9099747799</p>
+                </div>
+                <div class="col">
+                    <div class="icons">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+                    <h2>Email</h2>
+                    <br>
+                    <p>mail@MubberryStudio.com</p>
+                    <p>support@MubberryStudio.com</p>
+                </div>
+                <div class="col">
+                    <div class="icons">
+                        <i class="bi bi-send-fill"></i>
+                    </div>
+                    <h2>Address</h2>
+                    <br>
+                    <p>02,road,opposite to Homeland city, nearby hero showroom, Sai Kutir Society, Piplod, Surat,
+                        Gujarat 395007, INDIA</p>
+                </div>
+            </section>
+        </div>
+    </div>
+    <div id="FAQs_link">
+        <div class="faq-container">
+            <h1>FREQUENTLY ASKED QUESTION</h1>
+
+            <div class="faq-item" onclick="toggleAnswer(1)">
+                <p class="question">Should we need any type of pre-requisite before joining this course?</p>
+                <p class="answer" id="answer1">No, you do not require any pre-requisite. Just we need is enthusiam to
+                    learn.
+                </p>
+            </div>
+            <hr>
+            <div class="faq-item" onclick="toggleAnswer(2)">
+                <p class="question">Is there any age criteria to join the course?</p>
+                <p class="answer" id="answer2">No, there is no age criteria. </p>
+            </div>
+            <hr>
+            <div class="faq-item" onclick="toggleAnswer(3)">
+                <p class="question">Do I need to bring clay with me?</p>
+                <p class="answer" id="answer3">We will here provide you the best quality clay, but if you want you are
+                    free
+                    to bring with you.</p>
+            </div>
+            <hr>
+            <div class="faq-item" onclick="toggleAnswer(4)">
+                <p class="question">Is there any limit on no. of people that can attend one private session?</p>
+                <p class="answer" id="answer4">No, there is no limit. Come and enjoy your pottery date with your nearest
+                    and
+                    dearest ones</p>
+            </div>
+        </div>
+    </div>
+    <script>
+        let openAnswerId = null;
+
+        function toggleAnswer(id) {
+            const answer = document.getElementById("answer" + id);
+
+            if (openAnswerId !== null) {
+                const previousAnswer = document.getElementById("answer" + openAnswerId);
+                previousAnswer.style.display = "none";
+
+                if (openAnswerId === id) {
+                    openAnswerId = null;
+                    return;
+                }
+            }
+
+            answer.style.display = "block";
+            openAnswerId = id;
+        }
+        document.addEventListener('DOMContentLoaded', function () {
+            const carousel = document.querySelector(".carousel"),
+                firstImg = carousel.querySelectorAll("img")[0];
+            arrowIcons = document.querySelectorAll(".wrapper i");
+
+            let isDragstart = false, isDragging = false, prevPageX, prevScrollLeft, positionDiff;
+            let firstImgWidth = firstImg.clientWidth + 14;//Getting first image width and getting 14 margin value
+            let scrollWidth = carousel.scrollWidth - carousel.clientWidth; //Getting more scrollable width
+
+            const showHideIcons = () => {
+                //Showing and hiding prev/next icon according to carousel scroll left value
+                arrowIcons[0].style.display = carousel.scrollLeft == 0 ? "none" : "block";
+                arrowIcons[1].style.display = carousel.scrollLeft == scrollWidth ? "none" : "block";
+            }
+
+            arrowIcons.forEach(icon => {
+                icon.addEventListener("click", () => {
+                    //If clicked icon is left, reduce width value from carousel scroll left else add to it
+                    carousel.scrollLeft += icon.id == "left" ? - firstImgWidth : firstImgWidth;
+                    setTimeout(() => showHideIcons(), 60); //Calling showHideIcons() fof 60ms
+                });
+            });
+
+            autoSlide = () => {
+                //If there is no image left to scroll then return from here
+                if (carousel.scrollLeft == (carousel.scrollWidth - carousel.clientWidth)) return;
+
+                positionDiff = Math.abs(positionDiff); //making position value to positive
+                let firstImgWidth = firstImg.clientWidth + 14;
+                let valDifference = firstImgWidth - positionDiff;
+
+                if (carousel.scrollLeft > prevScrollLeft) {
+                    //If user is scrolling to the right
+                    return carousel.scrollLeft += positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+                }
+                //If user is scrolling to the left
+                carousel.scrollLeft -= positionDiff > firstImgWidth / 3 ? valDifference : -positionDiff;
+            }
+
+            const dragStart = (e) => {
+                isDragstart = true;
+                prevPageX = e.pageX || e.touches[0].pageX;
+                prevScrollLeft = carousel.scrollLeft;
+            };
+
+            const dragging = (e) => {
+                if (!isDragstart) return;
+                e.preventDefault();
+                isDragging = true;
+                carousel.classList.add("dragging");
+                positionDiff = (e.pageX || e.touches[0].pageX) - prevPageX;
+                carousel.scrollLeft = prevScrollLeft - positionDiff;
+                showHideIcons();
+            };
+
+            const dragStop = () => {
+                isDragstart = false;
+                carousel.classList.remove("dragging");
+
+                if (!isDragging) return;
+                isDragging = false;
+                autoSlide();
+            };
+
+            carousel.addEventListener("mousedown", dragStart);
+            carousel.addEventListener("touchstart", dragStart);
+
+            carousel.addEventListener("mousemove", dragging);
+            carousel.addEventListener("touchmove", dragging);
+
+            carousel.addEventListener("mouseup", dragStop);
+            carousel.addEventListener("mouseleave", dragStop);
+            carousel.addEventListener("touchend", dragStop);
+        });
+    </script>
+    <!--------Footer------->
+    <footer>
+        <div class="combine-footer-column">
+            <div class="combine-footer-column-inside">
+                <div class="column1">
+                    <div class="logo" style="background-image: url('logo.png');"></div>
+                    <p>Amplify your journey through the symphony of a creative life.</p>
+                    <div class="social-media-icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                </div>
+                <div class="column2 column">
+                    <ul>
+                        <li class="heading">About Us</li>
+                        <li><a href="About.html">About owner</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="courses.html">Private sessions</a></li>
+                    </ul>
+                </div>
+                <div class="column3 column">
+                    <ul>
+                        <li class="heading">Contact Us</li>
+                        <li><a href="#contact_link">Studio location</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=9099747799">Whatsapp</a></li>
+                        <li><a href="https://www.instagram.com/mudberry_studio?igsh=MWN0aGJ4ajZ2enl5bg==">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="column4 column">
+                    <ul>
+                        <li class="heading">Categories</li>
+                        <li><a href="pot.html">Pots</a></li>
+                        <li><a href="creativity.html">Home decor</a></li>
+                        <li><a href="#explore_link">Best of us</a></li>
+                        <li><a href="animal.html">Animal sculptures</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-------Javascript------->
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="bootstrap.js"></script>
+</body>
+
+</html>
