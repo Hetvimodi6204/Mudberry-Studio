@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="stylesheet" href="About.css">
+    <link href="bootstrap.css" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css"
+        integrity="sha512-ZnR2wlLbSbr8/c9AgLg3jQPAattCUImNsae6NHYnS9KrIwRdcY9DxFotXhNAKIKbAXlRnujIqUWoXXwqyFOeIQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<style>
+    /**Navbar**/
+    body {
+        padding-top: 100px;
+        background-color: #efefef;
+    }
+
+    .navbar-brand img {
+        margin: -53px;
+        margin-left: 25px;
+        padding: 0px;
+    }
+
+    .navbar-brand {
+        margin: -53px;
+        padding: 0px;
+    }
+
+    .navbar {
+        background-color: whitesmoke;
+        height: 50px;
+        padding: 0.5rem;
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 3;
+    }
+
+    .navbar-expand-lg.fixed-top {
+        position: fixed;
+        top: 50px;
+        width: 100%;
+        z-index: 3;
+    }
+
+    .navbar-toggler {
+        border: none;
+        font-size: 1.25rem;
+    }
+
+    .navbar-toggler:focus,
+    .btn-close:focus {
+        box-shadow: none;
+        outline: none;
+    }
+
+    .nav-link {
+        color: #666777;
+        font-weight: 500;
+        position: relative;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        color: #000;
+    }
+
+    @media (min-width:991px) {
+        .nav-link::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 2px;
+            background-color: #5c3f3f;
+            visibility: hidden;
+            transition: 0.3s ease-in-out;
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            width: 100%;
+            visibility: visible;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <!------------Navigation bar-------------->
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid text-center">
+                <h5 class="mx-auto"
+                    style="font-size: 1rem; font-weight: 700; background-color:#e2e6e8; width:100vw; height:40px;">
+                    Pottery that match your vibe <span style="color:#666777">For you with <i
+                            class="bi bi-suit-heart-fill"></i></span>
+                </h5>
+            </div>
+        </nav>
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a href="#" class="navbar-brand">
+                    <img src="logo.png" style="height:150px;" alt="brand-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                    aria-labelledby="offcanvasNavbarLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Mudberry Studio</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2 active" aria-current="page" href="index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="About.html">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="courses.html">Activities</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#contact_link">Contact Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link mx-lg-2" href="#FAQs_link">FAQs</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="about-us-container">
+        <div class="about-us-content">
+            <h1>About us</h1>
+            <p>Mudberry Studio is the pottery studio where we designs various potteries with best of our creativity!</p>
+            <br>
+        </div>
+    </div>
+
+    <!--Information Set 1-->
+    <div class="info-set-1 main-container">
+        <div class="image-info-set-1 left-container">
+            <div class="image">
+                <div class="details">
+                    <a class="name">JAYDEEP KOTADIYA</a>
+                    <a class="occupation">Ceramic Art Teacher</a>
+                    <div class="socials-link">
+                        <a><i class="fa-brands fa-facebook"></i> </a>
+                        <a><i class="fa-brands fa-instagram"></i> </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-container">
+            <h3>About Owner</h3>
+            <p class="little-more-intro">A PASSIONATE CREATOR</p>
+            <p class="para-intro-1 para-intro">
+                Mr. Jaydeep Kotadiya, an accomplished Ceramic Art teacher, currently holds a position<br> in the
+                sculpture department at Surat College of Fine Art, VNSGU.< He earned his bachelor's<br>degree in
+                    sculpture and completed his master's in Ceramic from Santiniketan, West Bengal,<br>in 2018.Since
+                    then, he has showcased his expertise through various art exhibitions and <br> actively participated
+                    in workshops.
+
+            </p>
+            <p class="para-intro-2 para-intro">
+                With a rich academic background, Mr. Kotadiya holds a Master of Fine Arts (M.F.A.) in<br> Ceramic &
+                Glass from Vishwa Bharti University, Santiniketan. Bringing his passion for <br> ceramic art into
+                education, he has been contributing to the field since 2019. <br>For the past two years, he has served
+                as a Teaching Assistant at Surat College of Fine Art,<br> where he imparts his knowledge and skills to
+                aspiring artists.
+            </p>
+        </div>
+    </div>
+
+    <!--Information Set 2-->
+    <div class="info-set-2 main-container">
+        <div class="I2 right-container">
+            <h3>About Studio</h3>
+            <p class="little-more-intro">A STUDIO WHICH SAVES YOUR MEMORY</p>
+            <p class="para-intro-1 para-intro">
+                In addition to his academic role, Mr. Kotadiya is the proud owner of Mudberry <br> Pottery Studio, where
+                he combines his teaching experience with hands-on artistry.<br>Through the studio, he extends his
+                artistic vision to the community, offering a <br> space for creativity and learning. With a dedication
+                to both education and <br> art practice, Mr. Jaydeep Kotadiya continues to inspire and contribute to
+                the<br> world of ceramic art.
+            </p>
+            <!-- <p class="para-intro-2 para-intro">
+       
+    </p> -->
+        </div>
+        <div class="image-info-set-2 left-container">
+            <div class="image image-2" style="background-image:url('Screenshot_20231229-135313_1.jpg');">
+            </div>
+        </div>
+    </div>
+    </div>
+    <div class="info-container">
+        <h4>If you are a pottery enthusiast, you must explore our courses, you will love it!</h4>
+        <br>
+        <a href="courses.html">
+            <button class="info-button">VIEW OUR COURSE</button>
+        </a>
+    </div>
+    <!--------Footer------->
+    <footer>
+        <div class="combine-footer-column">
+            <div class="combine-footer-column-inside">
+                <div class="column1">
+                    <div class="logo" style="background-image: url('logo.png');"></div>
+                    <p>Amplify your journey through the symphony of a creative life.</p>
+                    <div class="social-media-icons">
+                        <i class="fa-brands fa-facebook"></i>
+                        <i class="fa-brands fa-instagram"></i>
+                        <i class="fa-brands fa-x-twitter"></i>
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </div>
+                </div>
+                <div class="column2 column">
+                    <ul>
+                        <li class="heading">About Us</li>
+                        <li><a href="About.html">About owner</a></li>
+                        <li><a href="courses.html">Courses</a></li>
+                        <li><a href="courses.html">Private sessions</a></li>
+                    </ul>
+                </div>
+                <div class="column3 column">
+                    <ul>
+                        <li class="heading">Contact Us</li>
+                        <li><a href="index.html">Studio location</a></li>
+                        <li><a href="https://api.whatsapp.com/send?phone=9099747799">Whatsapp</a></li>
+                        <li><a href="https://www.instagram.com/mudberry_studio?igsh=MWN0aGJ4ajZ2enl5bg==">Instagram</a></li>
+                    </ul>
+                </div>
+                <div class="column4 column">
+                    <ul>
+                        <li class="heading">Categories</li>
+                        <li><a href="pot.html">Pots</a></li>
+                        <li><a href="creativity.html">Home decor</a></li>
+                        <li><a href="index.html">Best of us</a></li>
+                        <li><a href="animal.html">Animal sculptures</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.7.0.js"
+        integrity="sha256-JlqSTELeR4TLqP0OG9dxM7yDPqX1ox/HfgiSLBj8+kM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.9.2/umd/popper.min.js"
+        integrity="sha512-2rNj2KJ+D8s1ceNasTIex6z4HWyOnEYLVC3FigGOmyQCZc2eBXKgOxQmo3oKLHyfcj53uz4QMsRCWNbLd32Q1g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="bootstrap.js"></script>
+</body>
+
+
+</html>
